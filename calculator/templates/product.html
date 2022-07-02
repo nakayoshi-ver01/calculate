@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}関数電卓(予定){% endblock title %}
+{% block content %}
+    <h1>djangoの関数電卓(予定)</h1>
+    <form method="post" action="product">
+        {% csrf_token %}
+        <input type="text" name="val1">
+        <div id="operator">*</div>
+        <input type="text" name="val2">
+        <div id="result"> 
+        <button type="submit"> = </button>
+        {{ answer }}<br>
+        </div>
+    </form>
+{% endblock %}

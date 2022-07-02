@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}関数電卓(予定){% endblock title %}
+{% block content %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <h1>djangoの関数電卓(予定)</h1>
+    <form method="post" action="about">
+        {% csrf_token %}
+        <input type="text" name="val1" maxlength="0" value= {{val1}}>
+        <div>
+        <button type="submit" formaction="sum"> + </button>
+        <button type="submit" formaction="minus"> - </button>
+        <button type="submit" formaction="prod"> * </button>
+        <button type="submit" formaction="quote"> / </button>
+        <button type="submit" formaction="ruijo"> ^ </button>
+        ←演算子を選んでください。
+        </div>
+        <input type="text" name="val2" maxlength="0" value= {{val2}}><br>
+        ={{ answer }}<br>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr><td><u><input type="number" name="val3" value= {{val3}}></u></td></tr>
+            <tr><td><hr color="#000000" style="height: 1px; width: 180px;"></td></tr>
+            <tr><td><input type="number" name="val4" value= {{val4}}></td></tr>
+        </table>
+        <button type="submit"> = </button>
+        {{ bunsi }}/{{ bunbo }}
+    </form>
+    
+{% endblock %}
